@@ -1,7 +1,7 @@
 ''' 
 Name: Yasas Maddumage. 
 Student ID: 170308233. 
-Description: Lab 1 Question 2 (lab1a.py).  
+Description: Lab 1 part 1 Question 2 (lab1b.py).  
 ''' 
 
 

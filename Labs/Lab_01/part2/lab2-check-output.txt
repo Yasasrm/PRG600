@@ -1,10 +1,11 @@
 INFO:root:logging test
-INFO:root:Test Run: 2024-05-14 12:11:05.440256
+INFO:root:Test Run: 2024-05-14 12:44:48.651896
 INFO:root:lab2a.py: test successful.
 INFO:root:lab2a.py ce793d5760e694106198832cbd36fa22
 INFO:root:done.
 INFO:root:lab2b.py: test successful.
-INFO:root:lab2b.py e0a3edd9dcaa9e3e7b01f6e5fa5aed46
+INFO:root:lab2b.py 32a4231548ba28c10aee1eef1ed10a5b
 INFO:root:done.
-WARNING:root:challenge2.py: Failures encountered.
+INFO:root:challenge2.py: test successful.
+INFO:root:challenge2.py 2416d5d64d7b13a06a5359ce3542133d
 INFO:root:done.

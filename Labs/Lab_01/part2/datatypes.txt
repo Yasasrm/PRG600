@@ -1,0 +1,18 @@
+''' 
+Name: Yasas Maddumage. 
+Student ID: 170308233. 
+Description: Lab 1 part 2 Question 1 (datatype.txt).  
+''' 
+
+
+What datatype (string/integer/float) will you use for the following: 
+1. The student’s name? 
+    answer: string
+2. The number of students in a class? 
+    answer: integer
+3. The student’s grade (as a percent)? 
+    answer: float
+4. The student’s nine-digit ID number? 
+    answer: integer
+5. The total amount of tuitions paid by the student (in Canadian dollars)? 
+    answer: float

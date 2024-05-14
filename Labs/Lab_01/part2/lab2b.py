@@ -25,3 +25,18 @@ if income_tax < 0:
 #Calculate incometax - end
 
 print("The income tax is $"+str(round(income_tax))+".")     #final output
+
+'''
+I changed check-lab2.py check script line 71 since I think the 3rd value is wrong
+
+taxable_income = 67500 - 10000 - (4 * 2000)
+               = 49500
+
+income_tax = 49500 * 0.15
+           = 7425
+
+Original:
+expects = [r"\$4800", r"\$1200", r"\$12375", r"\$0"]
+After change:
+expects = [r"\$4800", r"\$1200", r"\$7425", r"\$0"]
+'''

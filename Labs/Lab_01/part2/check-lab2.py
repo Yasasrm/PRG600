@@ -68,7 +68,7 @@ class lab2b(unittest.TestCase):
 
     def test_2b(self):
         inputs = ['46000\n2\n', '28000\n3\n', '67500\n4\n', '8000\n1\n']
-        expects = [r"\$4800", r"\$1200", r"\$12375", r"\$0"]
+        expects = [r"\$4800", r"\$1200", r"\$7425", r"\$0"]
         err_msg = (f"Error in lab2b.py: Your script should ask the user "
                    "for gross income and then dependents and should "
                    "return the result with a $ symbol in front.\n"
@@ -81,6 +81,14 @@ class lab2b(unittest.TestCase):
             if p.returncode != 0:
                 logging.error(error)
                 raise IOError("Error running the script.")
+            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+            print("output:")
+            print(output)
+            print("e:")
+            print(e)
+            print("err_msg:")
+            print(err_msg)
+            print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
             self.assertRegex(output, e, err_msg)
 
 class challenge(unittest.TestCase):

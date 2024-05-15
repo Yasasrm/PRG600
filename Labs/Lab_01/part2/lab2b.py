@@ -13,9 +13,9 @@ taxable_income = int(gross_income) - standerd_deduction - dependent_deduction #c
 income_tax = 0  #defined income tax
 
 #Calculate incometax - start
-if taxable_income < 32000:
+if int(gross_income) < 32000:
     income_tax = taxable_income * 0.1
-elif 32000 <= taxable_income <= 64000:
+elif 32000 <= int(gross_income) < 64000:
     income_tax = taxable_income * 0.15
 else:
     income_tax = taxable_income * 0.25
@@ -25,18 +25,3 @@ if income_tax < 0:
 #Calculate incometax - end
 
 print("The income tax is $"+str(round(income_tax))+".")     #final output
-
-'''
-I changed check-lab2.py check script line 71 since I think the 3rd value is wrong
-
-taxable_income = 67500 - 10000 - (4 * 2000)
-               = 49500
-
-income_tax = 49500 * 0.15
-           = 7425
-
-Original:
-expects = [r"\$4800", r"\$1200", r"\$12375", r"\$0"]
-After change:
-expects = [r"\$4800", r"\$1200", r"\$7425", r"\$0"]
-'''

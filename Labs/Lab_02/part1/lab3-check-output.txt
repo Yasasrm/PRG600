@@ -1,12 +1,13 @@
 INFO:root:logging test
-INFO:root:Test Run: 2024-05-25 17:04:38.817373
+INFO:root:Test Run: 2024-05-25 17:48:32.895137
 INFO:root:lab3a.py: test successful.
 INFO:root:lab3a.py 080e4fd373ba1cdd551041ad14c51ba2
 INFO:root:done.
 INFO:root:lab3b.py: test successful.
-INFO:root:lab3b.py bd567437ed53a76452e34062681bd363
+INFO:root:lab3b.py dc12833876ebd8c53732ff80d9265ecf
 INFO:root:done.
-WARNING:root:lab3c.py: Failures encountered.
+INFO:root:lab3c.py: test successful.
+INFO:root:lab3c.py 14bd3ffd2e44d9a1e176634c8d4d2cc5
 INFO:root:done.
 WARNING:root:lab3d.py: Failures encountered.
 INFO:root:done.

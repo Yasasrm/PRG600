@@ -1,7 +1,7 @@
 ''' 
 Name: Yasas Maddumage. 
 Student ID: 170308233. 
-Description: Lab 2 part 2 Question 1 (lab3b.py).  
+Description: Lab 2 part 1 Question 2 (lab3b.py).  
 ''' 
 count = 0
 while count < 11:

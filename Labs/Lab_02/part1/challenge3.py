@@ -16,13 +16,11 @@ def main():
 def binaryConverter(dcml):
     quotient = int(dcml)/2
     remainder = int(dcml)%2
-    if quotient != 1:
+    if quotient > 0:
         binaryDigir = remainder
         binaryConverter(quotient)
-    else:
-        binaryDigir = round(quotient)
-    global binNumber
-    binNumber += str(binaryDigir)
+        global binNumber
+        binNumber += str(binaryDigir)
 
 #entry point
 if __name__ == "__main__":

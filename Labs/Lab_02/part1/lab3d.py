@@ -1,12 +1,11 @@
-import random
-from random import randint
-
-
 ''' 
 Name: Yasas Maddumage. 
 Student ID: 170308233. 
 Description: Lab 2 part 1 Question 4 (lab3d.py).  
 ''' 
+
+import random
+from random import randint
 
 #variable initialization
 secret = randint(1,10)

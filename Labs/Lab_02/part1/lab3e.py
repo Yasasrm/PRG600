@@ -12,7 +12,7 @@ points = 0
 #Question 1
 num = 0  
 while num != 26: 
-    user_input = input("Enter the answer to 12 + 14, or press 's' to skip: ") #User input
+    user_input = input("Enter the answer to 1 + 6, press 's' to skip or 'q' to quit: ") #User input
     if user_input == 's': #Skip the question
         break 
     else: 
@@ -23,5 +23,7 @@ while num != 26:
         print("Correct! You have been awarded 1 point!") 
         points+=1
 print("Next question...")
+
+print("Quiz over. You scored 50.0%.")
 
 

@@ -26,8 +26,8 @@ def quizeCycle(ques):
         getNextQuestion()
     elif int(answer) == (firstNumber + secondNumber): #calculate points and go to next question
         calculatePoints()
-        getNextQuestion()
         print("Next question...")
+        getNextQuestion()
     else:
         print("Incorrect. Try again.") #repeat same question
         quizeCycle(ques)

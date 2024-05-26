@@ -15,13 +15,6 @@ questionCount = 0
 def main():
     quizeCycle(getNewQuizQuestion())
     
-def getNewQuizQuestion():
-  global firstNumber
-  firstNumber = randint(1,10)
-  global secondNumber
-  secondNumber = randint(1,10)
-  return "Enter the answer to %s + %s, press 's' to skip or 'q' to quit: " % (firstNumber, secondNumber)  #Question
-
 def quizeCycle(ques):
     answer = getAnswerFromUser(ques)
     if answer == "q":
@@ -35,6 +28,14 @@ def quizeCycle(ques):
     else:
         print("Incorrect. Try again.")
         quizeCycle(ques)
+
+def getNewQuizQuestion():
+  global firstNumber
+  firstNumber = randint(1,10)
+  global secondNumber
+  secondNumber = randint(1,10)
+  return "Enter the answer to %s + %s, press 's' to skip or 'q' to quit: " % (firstNumber, secondNumber)  #Question
+
         
 def getAnswerFromUser(ques):
     return input(ques)

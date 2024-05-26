@@ -46,6 +46,9 @@ def getAnswerFromUser(ques):
 
 #print final score
 def printScore():
+    global questionCount
+    if questionCount == 0: 
+        questionCount = 1 #to eliminate division by zero
     print("Quiz over. You scored {percent:.1f}%.".format(percent = (points/questionCount)*100))
 
 #move to next question

@@ -8,16 +8,20 @@ Math Quiz v2.0
 import random
 from random import randint
 
-sum = 0 
-print("SUMMING CALCULATOR") 
-while True: 
-    print("The sum so far: " + str(sum)) 
-    user_input = input("Enter a number to add to your sum. Pressing Enter will exit. ") #get user input
-    if user_input == "": #exit point
+points = 0
+#Question 1
+num = 0  
+while num != 26: 
+    user_input = input("Enter the answer to 12 + 14, or press 's' to skip: ") #User input
+    if user_input == 's': #Skip the question
         break 
-    else:  #summing calculation
-        sum += int(user_input) 
-print("Thank you for using summing calculator. The final sum was " + str(sum) #output
-+ ".")
+    else: 
+        num = int(user_input) 
+    if num != 26: #Incorrect answer
+        print("Incorrect. Try again.") 
+    else: #correct answer
+        print("Correct! You have been awarded 1 point!") 
+        points+=1
+print("Next question...")
 
 

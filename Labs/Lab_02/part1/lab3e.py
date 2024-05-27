@@ -13,10 +13,6 @@ secondNumber = 0
 points = 0
 questionCount = 0
 
-#start
-def main():
-    quizeCycle(getNewQuizQuestion())
-
 #quiz question cycle until press q    
 def quizeCycle(ques):
     answer = getAnswerFromUser(ques)
@@ -65,4 +61,4 @@ def calculatePoints():
 
 #entry point
 if __name__ == "__main__":
-    main()
+    quizeCycle(getNewQuizQuestion())

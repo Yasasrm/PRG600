@@ -1,5 +1,5 @@
 INFO:root:logging test
-INFO:root:Test Run: 2024-05-26 22:03:26.935879
+INFO:root:Test Run: 2024-05-27 00:41:13.386449
 INFO:root:lab4a.py: test successful.
 INFO:root:lab4a.py 3f583035eb71f7fbbdd2298743cdece0
 INFO:root:done.
@@ -9,5 +9,6 @@ INFO:root:done.
 INFO:root:lab4c.py: test successful.
 INFO:root:lab4c.py 9659f85620d771c5ba008117bb65181a
 INFO:root:done.
-WARNING:root:challenge4.py: Failures encountered.
+INFO:root:challenge4.py: test successful.
+INFO:root:challenge4.py 7a49ed012ba192cdce818236bdc09b97
 INFO:root:done.

@@ -23,6 +23,8 @@ if __name__ == "__main__":
         elif radius == "" and cycle == 0:
            print("Program was cancelled.")
            break 
+        elif radius.isnumeric():
+            print("Error: %s is out of bounds." %radius)
         else:
             print("Error: %s is not a number." %radius)
         cycle+=1

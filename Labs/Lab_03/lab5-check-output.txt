@@ -1,5 +1,5 @@
 INFO:root:logging test
-INFO:root:Test Run: 2024-06-04 10:49:24.158153
+INFO:root:Test Run: 2024-06-04 14:48:41.874909
 INFO:root:lab5a.py: test successful.
 INFO:root:lab5a.py 2f20a96e3da2b246e9a36c685b08ad1e
 INFO:root:done.
@@ -7,7 +7,7 @@ INFO:root:lab5b.py: test successful.
 INFO:root:lab5b.py 46f12ee7ffc6faf618654415aaeb9861
 INFO:root:done.
 INFO:root:lab5c.py: test successful.
-INFO:root:lab5c.py d4067f2128b41037e14d3591b1247781
+INFO:root:lab5c.py 963dad9d962850750c05ea8827025198
 INFO:root:done.
 INFO:root:lab5d.py: test successful.
 INFO:root:lab5d.py 76353b8f72c06b04b7e7eb722f7b43f5
@@ -16,5 +16,5 @@ INFO:root:lab5e.py: test successful.
 INFO:root:lab5e.py e3ae2031a0488124f6abfab65608e67c
 INFO:root:done.
 INFO:root:challenge5.py: test successful.
-INFO:root:challenge5.py bef7e901f5f17bdc618cae4a75166d83
+INFO:root:challenge5.py 345cb770afa3d5650556cb2b45832011
 INFO:root:done.

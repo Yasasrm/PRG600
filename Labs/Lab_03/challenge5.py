@@ -61,26 +61,16 @@ vehicle_brands = [
 
 
 def  getEmptyList(length):
-    emptyString = []
-    while length > 0:
-        emptyString.append("_")
-        length -= 1
-    return emptyString
+    return ["_" for _ in range(length)]
 
 def fillGuessingWord(word, secret, char):
-    i = 0
-    for character in secret:
+    for i, character in secret:
         if character == char and  word[i] == "_":
             word[i] = char
             break
-        else:
-            i += 1
 
 def printGuessingWord(word):
-    printString = ""
-    for character in word:
-        printString += character+" "
-    print(printString.strip())
+    print(" ".join(word))
 
 if __name__ == "__main__":
     secret = random.choice(vehicle_brands).lower()

@@ -60,10 +60,10 @@ vehicle_brands = [
 
 
 
-def  getEmptyList(length):
+def  getEmptyList(length): #returns a list of underscores with the length of the secret
     return ["_" for _ in range(length)]
 
-def fillGuessingWord(word, secret, char):
+def fillGuessingWord(word, secret, char): #replace undescore with correct character
     i = 0
     for character in secret:
         if character == char and  word[i] == "_":
@@ -72,28 +72,28 @@ def fillGuessingWord(word, secret, char):
         else:
             i += 1
 
-def printGuessingWord(word):
+def printGuessingWord(word): #print list of guesses as a single string, characters are sepereted by space
     print(" ".join(word))
 
-if __name__ == "__main__":
+if __name__ == "__main__":  #entry point
     secret = random.choice(vehicle_brands).lower()
     print("I'm thinking of a vehicle brands. Can you guess what it is?")
     word = getEmptyList(len(secret))
     while True:
         print("Your word:")
         printGuessingWord(word)
-        guess = input("Enter your guess:").lower()
-        if guess == "":
+        guess = input("Enter your guess:").lower() #user input (guess)
+        if guess == "":   #exit the loop
             break
-        elif len(guess) >1 and guess == secret:
+        elif len(guess) >1 and guess == secret: #guess correct word
             print("You win!")
             break
-        elif len(guess) == 1 and guess in secret:
+        elif len(guess) == 1 and guess in secret: #guess a letter contain in the secret
             fillGuessingWord(word, secret, guess)
             printGuessingWord(word)
-        elif len(guess) == 1:
+        elif len(guess) == 1: #guess a letter not contain in the secret
             print("Sorry, my word doesn't contain that letter.")
         else:
-            print("Sorry, that's not it.")
+            print("Sorry, that's not it.") #guess a wrong word
 
 

@@ -64,10 +64,13 @@ def  getEmptyList(length):
     return ["_" for _ in range(length)]
 
 def fillGuessingWord(word, secret, char):
-    for i, character in secret:
+    i = 0
+    for character in secret:
         if character == char and  word[i] == "_":
             word[i] = char
             break
+        else:
+            i += 1
 
 def printGuessingWord(word):
     print(" ".join(word))
@@ -79,7 +82,7 @@ if __name__ == "__main__":
     while True:
         print("Your word:")
         printGuessingWord(word)
-        guess = input("Enter your guess:")
+        guess = input("Enter your guess:").lower()
         if guess == "":
             break
         elif len(guess) >1 and guess == secret:

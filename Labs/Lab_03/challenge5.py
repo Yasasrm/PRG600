@@ -58,18 +58,49 @@ vehicle_brands = [
     "Genesis"
 ]
 
-secret = random.randint(0, len(vehicle_brands)-1)
 
-while True:
+
+def  getEmptyList(length):
+    emptyString = []
+    while length > 0:
+        emptyString.append("_")
+        length -= 1
+    return emptyString
+
+def fillGuessingWord(word, secret, char):
+    i = 0
+    for character in secret:
+        if character == char and  word[i] == "_":
+            word[i] = char
+            break
+        else:
+            i += 1
+
+def printGuessingWord(word):
+    printString = ""
+    for character in word:
+        printString += character+" "
+    print(printString.strip())
+
+if __name__ == "__main__":
+    secret = random.choice(vehicle_brands).lower()
     print("I'm thinking of a vehicle brands. Can you guess what it is?")
-    guess = input("Enter a letter or a guess. Press enter to quit:")
-    if guess == "":
-        break
-    elif len(guess) >1 and guess == vehicle_brands[secret]:
-        print("You win!")
-    elif len(guess) == 1 and guess in vehicle_brands[secret]:
-        print("Yes, my word contains that letter.")
-    elif len(guess) == 1:
-        print("Sorry, my word doesn't contain that letter.")
-    else:
-        print("Sorry, that's not it.")
+    word = getEmptyList(len(secret))
+    while True:
+        print("Your word:")
+        printGuessingWord(word)
+        guess = input("Enter your guess:")
+        if guess == "":
+            break
+        elif len(guess) >1 and guess == secret:
+            print("You win!")
+            break
+        elif len(guess) == 1 and guess in secret:
+            fillGuessingWord(word, secret, guess)
+            printGuessingWord(word)
+        elif len(guess) == 1:
+            print("Sorry, my word doesn't contain that letter.")
+        else:
+            print("Sorry, that's not it.")
+
+

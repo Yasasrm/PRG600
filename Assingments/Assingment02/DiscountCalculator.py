@@ -8,6 +8,8 @@ Team Members:
 Description: Assigment 2 Discount Calculator.  
 ''' 
 
+import sys
+
 discountedList =  [
     "candy",
     "eggs",
@@ -62,8 +64,14 @@ def updateGrandDiscount():
     grandDiscount = sum(calculateItemDiscountPrice(item) for item in cart)
 
 def printReceipt():
+    global cart
     global grandTotal
     global grandDiscount
+
+    if not cart:
+        print("The cart is empty. Exiting...")
+        return
+
     print("\nRECEIPT")
     for i, (itemName, details) in enumerate(cart.items(), 1):
         itemTotal = calculateItemTotal(itemName)

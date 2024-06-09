@@ -24,12 +24,6 @@ grandDiscount = 0.0
 
 def isItemAvailableInDiscountList(itemName):
     return itemName in discountedList
-
-def isValidNumber(value):
-    try:
-        return float(value) > 0
-    except ValueError:
-        return False
     
 def addOrUpdateCart(itemName, unitPrice, quantity, discountFlag):
     if itemName in cart:
@@ -80,6 +74,8 @@ def printReceipt():
 def getItemName():
      while True:
         itemName = input("Please enter an item of food, or press Enter to exit:").strip().lower()
+        if itemName == "":
+            return ""
         try:
             int(itemName.strip())
             print("IItem name cannot be a numerical value.")
@@ -107,7 +103,7 @@ def getItemQuantity():
                 print("Number of items must be a positive number.")
                 continue
         except ValueError:
-            print("Number of items must be a numerical value.")
+            print("Number of items must be a integer value.")
             continue
         return quantity
 
@@ -115,12 +111,12 @@ def getItemQuantity():
 if __name__ == "__main__":
     print("Shopping Calculator")
     while True:
-
         itemName = getItemName()
-        unitPrice = getItemValue()
-        quantity = getItemQuantity()
         if itemName == "":
             break
+        unitPrice = getItemValue()
+        quantity = getItemQuantity()
+
         if isItemAvailableInDiscountList(itemName):
             discountFlag = 'Y'
         else:

@@ -8,8 +8,6 @@ Team Members:
 Description: Assigment 2 Discount Calculator.  
 ''' 
 
-import sys
-
 discountedList =  [
     "candy",
     "eggs",

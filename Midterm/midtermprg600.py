@@ -16,10 +16,10 @@ def rolldice():
     The function should also print output of the numbers generated (Eg: 6 and 6) 
     return: int:total (total of two random numbers) 
     """
-    dice1 = randint(1, 6)
-    dice2 = randint(1, 6)
-    print(f"{dice1} and {dice2}")
-    return dice1 + dice2
+    dice1 = randint(1, 6) # First dice roll
+    dice2 = randint(1, 6) # Second dice roll
+    print(f"{dice1} and {dice2}") # Print output
+    return dice1 + dice2 # Return total
 
 # 1 Marks 
 def getplayers(): 
@@ -31,12 +31,12 @@ def getplayers():
     """
     while True:
         try:
-            playerCount = int(input("Enter the number of players: "))
-            if playerCount < 1:
+            playerCount = int(input("Enter the number of players: ")) #Get player count
+            if playerCount < 1: #Player count validation for positive number
                 print("Please enter a valid number of players (1 or more).")
                 continue
             players = []
-            for i in range(playerCount):
+            for i in range(playerCount): #Get Players names
                 playerName = input(f"Enter name for player {i + 1}: ")
                 players.append(newPlayer(players, playerName))
             return players
@@ -44,9 +44,16 @@ def getplayers():
             print("Invalid input. Please enter a valid number.")
 
 def newPlayer(players, playerName):
+    """
+    This function takes in players and playerName as input parameters
+    The function checks playerName already exist in the players list
+    If the playerName already exist, playerName will rename to playerName#sameNameCount othewise playerName will not changed
+    The sameNameCount holds number of players currently exist in the players list same as playerName
+    This function returns the playerName
+    """
     sameNameCount = 0
     for player in players:
-        if player.lower() == playerName.lower():
+        if player.lower() == playerName.lower(): #Check for the same name
             sameNameCount += 1
     return playerName if sameNameCount == 0 else f"{playerName}#{sameNameCount}"
 
@@ -126,18 +133,18 @@ def rungame():
         roundCount = gameset[2] # Getting roundcount 
         printgame(game, players, 0, roundCount) # Calling printgame to print the first score card. 
 
-        for roundNum in range(roundCount):
-            for i, player in enumerate(players):
-                score = asktoroll(player)
-                game[i][roundNum] = score
-            printgame(game, players, roundNum + 1, roundCount)
+        for roundNum in range(roundCount): #Game starts
+            for i, player in enumerate(players): #For each player
+                score = asktoroll(player) #Roll the dices and get the total score
+                game[i][roundNum] = score #Save score
+            printgame(game, players, roundNum + 1, roundCount) #Round ends and print the score
 
-        winner = findwinner(game, players)
+        winner = findwinner(game, players) #Game ends and find the winner
         print(f"Congratulation {winner}! You are our WINNER!")
         
         playAgain = input("Would you like to play another game?\n[1] Yes\n[2] No\nYour choice: ")
         if playAgain != '1':
-            break
+            break #Program Exit point
 
 # 5 Marks
 def printgame(game, players, roundNum, roundCount): 
@@ -162,12 +169,36 @@ def printgame(game, players, roundNum, roundCount):
     print(getFooter(len(header)))
 
 def getHeader(roundNum, roundCount):
+    """
+    This function takes in round number and total round count as input parameters
+    The function create left aligned table header 
+    Sample Output:
+    ****************** End of Round 3 ******************
+    The Stars and the Round title (End of Round) are calculated and aligned as number of rounds changes. 
+    This function returns left aligned table header
+    """
     return f"{'*' * int((roundCount/2)*10)}{'End of Round '+str(roundNum) if roundNum else 'Round 1'}{'*' * int((roundCount/2)*10)}"
 
 def getFooter(len):
+    """
+    This function takes in table header lengh as input parameter
+    The function create left aligned table footer 
+    Sample Output:
+    ****************************************************
+    The Stars are calculated and aligned acording to the table header length. 
+    This function returns left aligned table footer
+    """
     return '*' * len
 
 def getTitles(players, roundCount):
+    """
+    This function takes in players and total round count as input parameters
+    The function create left aligned table column titles 
+    Sample Output:
+    Player    Round 1   Round 2   Round 3   Round 4   Total
+    The column titles are calculated and aligned as number of rounds changes. 
+    This function returns left aligned table column titles
+    """
     titles = f"{'Player':<{getMaxNameLength(players)}}"
     for r in range(1, roundCount + 1):
         titles += f"Round {r:<4}"
@@ -175,6 +206,20 @@ def getTitles(players, roundCount):
     return titles
 
 def getScoreBoard(players, game):
+    """
+    This function takes in players and game as input parameters
+    The function create left aligned table cells (Score Board) 
+    Sample Output:
+    Appla     8         7         4         19        
+    Applb     11        5         8         24        
+    Applc     9         3         5         17        
+    Appld     8         8         7         23
+    The table cells are calculated and aligned as number of rounds changes.
+    The first cell of each raw contain the player's name.
+    The last cell of each raw contain the total score of the player
+    The other cells contain the total points earn by the player at each round
+    This function returns left aligned table cells (Score Board)
+    """
     record = ""
     for i, player in enumerate(players):
         record += f"{player:<{getMaxNameLength(players)}}"
@@ -186,6 +231,12 @@ def getScoreBoard(players, game):
     return record
 
 def getMaxNameLength(players):
+    """
+    This function takes in players as input parameter
+    The function calculate the length of the Player's name column 
+    The default (minimum) lenth is 10 
+    This function returns the maximum lenght for the Player's name column
+    """
     maxLength = 10
     for player in players:
         if len(player) > maxLength:

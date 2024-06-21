@@ -140,7 +140,8 @@ def rungame():
             printgame(game, players, roundNum + 1, roundCount) #Round ends and print the score
 
         winner = findwinner(game, players) #Game ends and find the winner
-        print(f"Congratulation {winner}! You are our WINNER!")
+        print(f"Congratulation {winner}! You are our ", end="")
+        print("WINNER!" if ',' not in winner else "WINNERS!")
         
         playAgain = input("Would you like to play another game?\n[1] Yes\n[2] No\nYour choice: ")
         if playAgain != '1':

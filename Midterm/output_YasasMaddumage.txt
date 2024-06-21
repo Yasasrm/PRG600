@@ -1,0 +1,194 @@
+PS D:\Yasas\Stuff\Seneca\Semester 1\PRG600 - Programming\git_repo\PRG600\Midterm> python .\midtermprg600.py
+Enter the number of players: Four
+Invalid input. Please enter a valid number.
+Enter the number of players: 4
+Enter name for player 1: Appla
+Enter name for player 2: Applb
+Enter name for player 3: Applc
+Enter name for player 4: Appld
+Enter the number of rounds: Three
+Invalid input. Please enter a valid number.
+Enter the number of rounds: 3
+***************Round 1***************
+Player    Round 1   Round 2   Round 3   Total
+Appla     0         0         0         0
+Applb     0         0         0         0
+Applc     0         0         0         0
+Appld     0         0         0         0
+
+*************************************
+Appla! Hit enter once you are ready to roll your dices!
+5 and 3
+Applb! Hit enter once you are ready to roll your dices!
+4 and 6
+Applc! Hit enter once you are ready to roll your dices!
+1 and 1
+Appld! Hit enter once you are ready to roll your dices!
+2 and 1
+***************End of Round 1***************
+Player    Round 1   Round 2   Round 3   Total
+Appla     8         0         0         8
+Applb     10        0         0         10
+Applc     2         0         0         2
+Appld     3         0         0         3
+
+********************************************
+Appla! Hit enter once you are ready to roll your dices!
+2 and 6
+Applb! Hit enter once you are ready to roll your dices!
+5 and 6
+Applc! Hit enter once you are ready to roll your dices!
+1 and 5
+Appld! Hit enter once you are ready to roll your dices!
+4 and 4
+***************End of Round 2***************
+Player    Round 1   Round 2   Round 3   Total
+Appla     8         8         0         16
+Applb     10        11        0         21
+Applc     2         6         0         8
+Appld     3         8         0         11
+
+********************************************
+Appla! Hit enter once you are ready to roll your dices!
+2 and 4
+Applb! Hit enter once you are ready to roll your dices!
+3 and 5
+Applc! Hit enter once you are ready to roll your dices!
+6 and 1
+Appld! Hit enter once you are ready to roll your dices!
+3 and 1
+***************End of Round 3***************
+Player    Round 1   Round 2   Round 3   Total
+Appla     8         8         6         22
+Applb     10        11        8         29
+Applc     2         6         7         15
+Appld     3         8         4         15
+
+********************************************
+Congratulation Applb! You are our WINNER!
+Would you like to play another game?
+[1] Yes
+[2] No
+Your choice: 1
+Enter the number of players: 3
+Enter name for player 1: Oranga
+Enter name for player 2: Orangb
+Enter name for player 3: Orangc
+Enter the number of rounds: 2
+**********Round 1**********
+Player    Round 1   Round 2   Total
+Oranga    0         0         0
+Orangb    0         0         0
+Orangc    0         0         0
+
+***************************
+Oranga! Hit enter once you are ready to roll your dices!
+3 and 2
+Orangb! Hit enter once you are ready to roll your dices!
+6 and 4
+Orangc! Hit enter once you are ready to roll your dices!
+3 and 5
+**********End of Round 1**********
+Player    Round 1   Round 2   Total
+Oranga    5         0         5
+Orangb    10        0         10
+Orangc    8         0         8
+
+**********************************
+Oranga! Hit enter once you are ready to roll your dices!
+1 and 6
+Orangb! Hit enter once you are ready to roll your dices!
+3 and 6
+Orangc! Hit enter once you are ready to roll your dices!
+2 and 2
+**********End of Round 2**********
+Player    Round 1   Round 2   Total
+Oranga    5         7         12
+Orangb    10        9         19
+Orangc    8         4         12
+
+**********************************
+Congratulation Orangb! You are our WINNER!
+Would you like to play another game?
+[1] Yes
+[2] No
+Your choice: 2
+Thank you and see you later!
+PS D:\Yasas\Stuff\Seneca\Semester 1\PRG600 - Programming\git_repo\PRG600\Midterm> python .\midtermprg600.py
+Enter the number of players: 2
+Enter name for player 1: A
+Enter name for player 2: B
+Enter the number of rounds: 1
+*****Round 1*****
+Player    Round 1   Total
+A         0         0
+B         0         0
+
+*****************
+A! Hit enter once you are ready to roll your dices!
+1 and 3
+B! Hit enter once you are ready to roll your dices!
+3 and 2
+*****End of Round 1*****
+Player    Round 1   Total
+A         4         4
+B         5         5
+
+************************
+Congratulation B! You are our WINNER!
+Would you like to play another game?
+[1] Yes
+[2] No
+Your choice: 1
+Enter the number of players: 2
+Enter name for player 1: A
+Enter name for player 2: B
+Enter the number of rounds: 1
+*****Round 1*****
+Player    Round 1   Total
+A         0         0
+B         0         0
+
+*****************
+A! Hit enter once you are ready to roll your dices!
+3 and 6
+B! Hit enter once you are ready to roll your dices!
+3 and 5
+*****End of Round 1*****
+Player    Round 1   Total
+A         9         9
+B         8         8
+
+************************
+Congratulation A! You are our WINNER!
+Would you like to play another game?
+[1] Yes
+[2] No
+Your choice: 1
+Enter the number of players: 2
+Enter name for player 1: A
+Enter name for player 2: B
+Enter the number of rounds: 1
+*****Round 1*****
+Player    Round 1   Total
+A         0         0
+B         0         0
+
+*****************
+A! Hit enter once you are ready to roll your dices!
+3 and 2
+B! Hit enter once you are ready to roll your dices!
+4 and 1
+*****End of Round 1*****
+Player    Round 1   Total
+A         5         5
+B         5         5
+
+************************
+Congratulation A,B! You are our WINNERS!
+Would you like to play another game?
+[1] Yes
+[2] No
+Your choice: 2
+Thank you and see you later!
+PS D:\Yasas\Stuff\Seneca\Semester 1\PRG600 - Programming\git_repo\PRG600\Midterm>

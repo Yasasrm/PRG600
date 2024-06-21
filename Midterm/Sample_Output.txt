@@ -1,0 +1,110 @@
+user@laptop folder % python3 midterm.py
+Please enter the number of players: Four
+Invalid input please try again
+Please enter the number of players: 4
+Please enter player #1 name: Appla
+Please enter player #2 name: Applb
+Please enter player #3 name: Applc
+Please enter player #4 name: Appld
+Please enter how many rounds the players wish to play: Three
+Invalid input please try again
+Please enter how many rounds the players wish to play: 3
+****************** Round 1 ******************
+          Round 1   Round 2   Round 3   Total     
+Appla     0         0         0         0         
+Applb     0         0         0         0         
+Applc     0         0         0         0         
+Appld     0         0         0         0         
+*********************************************
+Appla! Hit enter once you are ready to roll your dices!
+3 and 1
+Applb! Hit enter once you are ready to roll your dices!
+1 and 3
+Applc! Hit enter once you are ready to roll your dices!
+2 and 1
+Appld! Hit enter once you are ready to roll your dices!
+5 and 6
+****************** End of Round 1 ******************
+          Round 1   Round 2   Round 3   Total     
+Appla     4         0         0         4         
+Applb     4         0         0         4         
+Applc     3         0         0         3         
+Appld     11        0         0         11        
+****************************************************
+Appla! Hit enter once you are ready to roll your dices!
+1 and 1
+Applb! Hit enter once you are ready to roll your dices!
+4 and 1
+Applc! Hit enter once you are ready to roll your dices!
+4 and 1
+Appld! Hit enter once you are ready to roll your dices!
+2 and 6
+****************** End of Round 2 ******************
+          Round 1   Round 2   Round 3   Total     
+Appla     4         2         0         6         
+Applb     4         5         0         9         
+Applc     3         5         0         8         
+Appld     11        8         0         19        
+****************************************************
+Appla! Hit enter once you are ready to roll your dices!
+6 and 1
+Applb! Hit enter once you are ready to roll your dices!
+4 and 1
+Applc! Hit enter once you are ready to roll your dices!
+3 and 2
+Appld! Hit enter once you are ready to roll your dices!
+3 and 2
+****************** End of Round 3 ******************
+          Round 1   Round 2   Round 3   Total     
+Appla     4         2         7         13        
+Applb     4         5         5         14        
+Applc     3         5         5         13        
+Appld     11        8         5         24        
+****************************************************
+Congratulations Appld! You are our WINNER!
+Would you like to play another game?
+[1] Yes
+[2] No
+Your choice: 1
+Please enter the number of players: 3
+Please enter player #1 name: Oranga
+Please enter player #2 name: Orangb
+Please enter player #3 name: Orangc
+Please enter how many rounds the players wish to play: 2
+************ Round 1 ************
+          Round 1   Round 2   Total     
+Oranga    0         0         0         
+Orangb    0         0         0         
+Orangc    0         0         0         
+*********************************
+Oranga! Hit enter once you are ready to roll your dices!
+3 and 4
+Orangb! Hit enter once you are ready to roll your dices!
+5 and 5
+Orangc! Hit enter once you are ready to roll your dices!
+6 and 2
+************ End of Round 1 ************
+          Round 1   Round 2   Total     
+Oranga    7         0         7         
+Orangb    10        0         10        
+Orangc    8         0         8         
+****************************************
+Oranga! Hit enter once you are ready to roll your dices!
+6 and 6
+Orangb! Hit enter once you are ready to roll your dices!
+5 and 6
+Orangc! Hit enter once you are ready to roll your dices!
+3 and 5
+************ End of Round 2 ************
+          Round 1   Round 2   Total     
+Oranga    7         12        19        
+Orangb    10        11        21        
+Orangc    8         8         16        
+****************************************
+Congratulations Orangb! You are our WINNER!
+Would you like to play another game?
+[1] Yes
+[2] No
+Your choice: 2
+Thank you and see you later!
+user@laptop folder % 

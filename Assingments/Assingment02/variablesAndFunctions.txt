@@ -1,0 +1,22 @@
+discountedList =  ["itemName1", ....]
+cart = {'itemName': 
+					{
+						'itemPrice': price, 
+						'itemQuantity': quantity, 
+						'discountFlag': 'flag'
+					}, ....
+		}
+grandTotal = 0.0
+grandDiscount = 0.0
+
+isItemAvailableInDiscountList(itemName)
+addOrUpdateCart(itemName, unitPrice, quantity, discountFlag)
+calculateItemDiscountPrice(itemName)
+getRate(qty)
+calculateItemTotal(itemName)
+updateGrandTotal()
+updateGrandDiscount()
+printReceipt()
+getItemName()
+getItemValue()
+getItemQuantity()

@@ -34,6 +34,7 @@ def addOrUpdateCart(itemName, unitPrice, quantity, discountFlag):
             'quantity': quantity,
             'discountFlag': discountFlag
         }
+    print(cart)
 
 def calculateItemDiscountPrice(itemName):
     item = cart[itemName]
@@ -43,7 +44,7 @@ def calculateItemDiscountPrice(itemName):
 
 def getRate(qty):
     if 1 < qty < 6:
-        return 0.05*qty
+        return 0.05*(qty-1)
     elif qty >= 6:
         return 0.2
     else:

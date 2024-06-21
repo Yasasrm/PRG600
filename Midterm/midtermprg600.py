@@ -144,6 +144,7 @@ def rungame():
         
         playAgain = input("Would you like to play another game?\n[1] Yes\n[2] No\nYour choice: ")
         if playAgain != '1':
+            print("Thank you and see you later!")
             break #Program Exit point
 
 # 5 Marks

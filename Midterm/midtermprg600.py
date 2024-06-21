@@ -38,20 +38,17 @@ def getplayers():
             players = []
             for i in range(playerCount):
                 playerName = input(f"Enter name for player {i + 1}: ")
-                if isNewplayer(players, playerName):
-                    players.append(playerName)
-                else:
-                    print(playerName + " already exist! Please enter a different name.")
-                    continue
+                players.append(newPlayer(players, playerName))
             return players
         except ValueError:
             print("Invalid input. Please enter a valid number.")
 
-def isNewplayer(players, playerName):
+def newPlayer(players, playerName):
+    sameNameCount = 0
     for player in players:
         if player.lower() == playerName.lower():
-            return False
-    return True
+            sameNameCount += 1
+    return playerName if sameNameCount == 0 else f"{playerName}#{sameNameCount}"
 
 # 1 Marks 
 def getrounds(): 

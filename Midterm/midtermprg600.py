@@ -107,7 +107,7 @@ def findwinner(game, players):
     totals = [sum(scores) for scores in game]
     maxScore = max(totals)
     winners = [players[i] for i, score in enumerate(totals) if score == maxScore]
-    return ', '.join(winners) 
+    return ','.join(winners) 
 
 # 5 Marks 
 def rungame():

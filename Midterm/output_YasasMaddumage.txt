@@ -18,54 +18,54 @@ Appld     0         0         0         0
 
 *************************************
 Appla! Hit enter once you are ready to roll your dices!
-5 and 3
+3 and 1
 Applb! Hit enter once you are ready to roll your dices!
-4 and 6
+4 and 2
 Applc! Hit enter once you are ready to roll your dices!
-1 and 1
+4 and 2
 Appld! Hit enter once you are ready to roll your dices!
-2 and 1
+6 and 1
 ***************End of Round 1***************
 Player    Round 1   Round 2   Round 3   Total
-Appla     8         0         0         8
-Applb     10        0         0         10
-Applc     2         0         0         2
-Appld     3         0         0         3
+Appla     4         0         0         4
+Applb     6         0         0         6
+Applc     6         0         0         6
+Appld     7         0         0         7
 
 ********************************************
 Appla! Hit enter once you are ready to roll your dices!
-2 and 6
+6 and 6
 Applb! Hit enter once you are ready to roll your dices!
-5 and 6
+1 and 4
 Applc! Hit enter once you are ready to roll your dices!
-1 and 5
+5 and 2
 Appld! Hit enter once you are ready to roll your dices!
-4 and 4
+5 and 3
 ***************End of Round 2***************
 Player    Round 1   Round 2   Round 3   Total
-Appla     8         8         0         16
-Applb     10        11        0         21
-Applc     2         6         0         8
-Appld     3         8         0         11
+Appla     4         12        0         16
+Applb     6         5         0         11
+Applc     6         7         0         13
+Appld     7         8         0         15
 
 ********************************************
 Appla! Hit enter once you are ready to roll your dices!
-2 and 4
+4 and 5
 Applb! Hit enter once you are ready to roll your dices!
-3 and 5
+2 and 2
 Applc! Hit enter once you are ready to roll your dices!
-6 and 1
+2 and 6
 Appld! Hit enter once you are ready to roll your dices!
-3 and 1
+1 and 3
 ***************End of Round 3***************
 Player    Round 1   Round 2   Round 3   Total
-Appla     8         8         6         22
-Applb     10        11        8         29
-Applc     2         6         7         15
-Appld     3         8         4         15
+Appla     4         12        9         25
+Applb     6         5         4         15
+Applc     6         7         8         21
+Appld     7         8         4         19
 
 ********************************************
-Congratulation Applb! You are our WINNER!
+Congratulation Appla! You are our WINNER!
 Would you like to play another game?
 [1] Yes
 [2] No
@@ -83,32 +83,32 @@ Orangc    0         0         0
 
 ***************************
 Oranga! Hit enter once you are ready to roll your dices!
-3 and 2
+2 and 2
 Orangb! Hit enter once you are ready to roll your dices!
-6 and 4
+1 and 1
 Orangc! Hit enter once you are ready to roll your dices!
-3 and 5
+4 and 4
 **********End of Round 1**********
 Player    Round 1   Round 2   Total
-Oranga    5         0         5
-Orangb    10        0         10
+Oranga    4         0         4
+Orangb    2         0         2
 Orangc    8         0         8
 
 **********************************
 Oranga! Hit enter once you are ready to roll your dices!
-1 and 6
+3 and 3
 Orangb! Hit enter once you are ready to roll your dices!
-3 and 6
+3 and 3
 Orangc! Hit enter once you are ready to roll your dices!
-2 and 2
+2 and 3
 **********End of Round 2**********
 Player    Round 1   Round 2   Total
-Oranga    5         7         12
-Orangb    10        9         19
-Orangc    8         4         12
+Oranga    4         6         10
+Orangb    2         6         8
+Orangc    8         5         13
 
 **********************************
-Congratulation Orangb! You are our WINNER!
+Congratulation Orangc! You are our WINNER!
 Would you like to play another game?
 [1] Yes
 [2] No
@@ -117,25 +117,25 @@ Thank you and see you later!
 PS D:\Yasas\Stuff\Seneca\Semester 1\PRG600 - Programming\git_repo\PRG600\Midterm> python .\midtermprg600.py
 Enter the number of players: 2
 Enter name for player 1: A
-Enter name for player 2: B
+Enter name for player 2: A
 Enter the number of rounds: 1
 *****Round 1*****
 Player    Round 1   Total
 A         0         0
-B         0         0
+A#1       0         0
 
 *****************
 A! Hit enter once you are ready to roll your dices!
-1 and 3
-B! Hit enter once you are ready to roll your dices!
-3 and 2
+4 and 2
+A#1! Hit enter once you are ready to roll your dices!
+5 and 5
 *****End of Round 1*****
 Player    Round 1   Total
-A         4         4
-B         5         5
+A         6         6
+A#1       10        10
 
 ************************
-Congratulation B! You are our WINNER!
+Congratulation A#1! You are our WINNER!
 Would you like to play another game?
 [1] Yes
 [2] No
@@ -151,38 +151,13 @@ B         0         0
 
 *****************
 A! Hit enter once you are ready to roll your dices!
-3 and 6
+3 and 3
 B! Hit enter once you are ready to roll your dices!
-3 and 5
+5 and 1
 *****End of Round 1*****
 Player    Round 1   Total
-A         9         9
-B         8         8
-
-************************
-Congratulation A! You are our WINNER!
-Would you like to play another game?
-[1] Yes
-[2] No
-Your choice: 1
-Enter the number of players: 2
-Enter name for player 1: A
-Enter name for player 2: B
-Enter the number of rounds: 1
-*****Round 1*****
-Player    Round 1   Total
-A         0         0
-B         0         0
-
-*****************
-A! Hit enter once you are ready to roll your dices!
-3 and 2
-B! Hit enter once you are ready to roll your dices!
-4 and 1
-*****End of Round 1*****
-Player    Round 1   Total
-A         5         5
-B         5         5
+A         6         6
+B         6         6
 
 ************************
 Congratulation A,B! You are our WINNERS!

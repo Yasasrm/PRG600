@@ -38,10 +38,21 @@ def getplayers():
             players = []
             for i in range(playerCount):
                 playerName = input(f"Enter name for player {i + 1}: ")
-                players.append(playerName)
+                if isNewplayer(players, playerName):
+                    players.append(playerName)
+                else:
+                    print(playerName + " already exist! Please enter a different name.")
+                    continue
             return players
         except ValueError:
             print("Invalid input. Please enter a valid number.")
+
+def isNewplayer(players, playerName):
+    for player in players:
+        if player.lower() == playerName.lower():
+            return False
+    return True
+
 # 1 Marks 
 def getrounds(): 
     """
@@ -97,8 +108,8 @@ def findwinner(game, players):
     :return string:winner (Winning players name as string)
     """ 
     totals = [sum(scores) for scores in game]
-    max_score = max(totals)
-    winners = [players[i] for i, score in enumerate(totals) if score == max_score]
+    maxScore = max(totals)
+    winners = [players[i] for i, score in enumerate(totals) if score == maxScore]
     return ', '.join(winners) 
 
 # 5 Marks 
@@ -115,24 +126,24 @@ def rungame():
         gameset = setgame() # Calling the setgame to get game info 
         game = gameset[0] # Getting game list 
         players = gameset[1] # Getting playerlist 
-        roundcount = gameset[2] # Getting roundcount 
-        printgame(game, players, 0, roundcount) # Calling printgame to print the first score card. 
+        roundCount = gameset[2] # Getting roundcount 
+        printgame(game, players, 0, roundCount) # Calling printgame to print the first score card. 
 
-        for round_num in range(roundcount):
+        for roundNum in range(roundCount):
             for i, player in enumerate(players):
                 score = asktoroll(player)
-                game[i][round_num] = score
-            printgame(game, players, round_num + 1, roundcount)
+                game[i][roundNum] = score
+            printgame(game, players, roundNum + 1, roundCount)
 
         winner = findwinner(game, players)
         print(f"Congratulation {winner}! You are our WINNER!")
         
-        play_again = input("Would you like to play another game?\n[1] Yes\n[2] No\nYour choice: ")
-        if play_again != '1':
+        playAgain = input("Would you like to play another game?\n[1] Yes\n[2] No\nYour choice: ")
+        if playAgain != '1':
             break
 
 # 5 Marks
-def printgame(game, players, roundnum, roundcount): 
+def printgame(game, players, roundNum, roundCount): 
     """
     This function takes in game list, players list, round number (aka which round is active), totalround count as input parameters
     The function prints left aligned pretty table of the game with Rounds in columns and players in rows 
@@ -147,7 +158,42 @@ def printgame(game, players, roundnum, roundcount):
     The Stars and the Round title (End of Round) are calculated and aligned as number of rounds changes. 
     This function does not return anything
     """
+    header = getHeader(roundNum, roundCount)
+    print(header)
+    print(getTitles(players, roundCount))
+    print(getScoreBoard(players, game))
+    print(getFooter(len(header)))
 
+def getHeader(roundNum, roundCount):
+    return f"{'*' * int((roundCount/2)*10)}{'End of Round '+str(roundNum) if roundNum else 'Round 1'}{'*' * int((roundCount/2)*10)}"
+
+def getFooter(len):
+    return '*' * len
+
+def getTitles(players, roundCount):
+    titles = f"{'Player':<{getMaxNameLength(players)}}"
+    for r in range(1, roundCount + 1):
+        titles += f"Round {r:<4}"
+    titles +="Total"
+    return titles
+
+def getScoreBoard(players, game):
+    record = ""
+    for i, player in enumerate(players):
+        record += f"{player:<{getMaxNameLength(players)}}"
+        total = 0
+        for roundScore in game[i]:
+            total += roundScore
+            record += f"{roundScore:<10}"
+        record += f"{total}\n"
+    return record
+
+def getMaxNameLength(players):
+    maxLength = 10
+    for player in players:
+        if len(player) > maxLength:
+            maxLength = len(player)
+    return maxLength
 
 def game():
     """

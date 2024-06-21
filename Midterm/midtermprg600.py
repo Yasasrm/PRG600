@@ -16,6 +16,11 @@ def rolldice():
     The function should also print output of the numbers generated (Eg: 6 and 6) 
     return: int:total (total of two random numbers) 
     """
+    dice1 = randint(1, 6)
+    dice2 = randint(1, 6)
+    print(f"{dice1} and {dice2}")
+    return dice1 + dice2
+
 # 1 Marks 
 def getplayers(): 
     """
@@ -24,6 +29,19 @@ def getplayers():
     If user entered invalid input for number of players (eg: string (a)) it throws an error and asks to retry 
     :return list:players (list of playernames entered by user)
     """
+    while True:
+        try:
+            playerCount = int(input("Enter the number of players: "))
+            if playerCount < 1:
+                print("Please enter a valid number of players (1 or more).")
+                continue
+            players = []
+            for i in range(playerCount):
+                playerName = input(f"Enter name for player {i + 1}: ")
+                players.append(playerName)
+            return players
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
 # 1 Marks 
 def getrounds(): 
     """
@@ -31,7 +49,15 @@ def getrounds():
     Based on the number of rounds entered as long it is valid return the number of rounds otherwise keep asking until a valid number entered. 
     :return int:roundcount (number of rounds)
     """
-    # Implement your function here
+    while True:
+        try:
+            roundCount = int(input("Enter the number of rounds: "))
+            if roundCount < 1:
+                print("Please enter a valid number of rounds (1 or more).")
+                continue
+            return roundCount
+        except ValueError:
+            print("Invalid input. Please enter a valid number.")
 
 # 4 Marks 
 def setgame():
@@ -46,8 +72,9 @@ def setgame():
     return: list:gameset (Eg gameset returned will be a list [game, players, roundcount]. In the gameset list game is lit, players is list and roundcount is integer)
     """ 
     players = getplayers() # Calling getplayers and getting player list 
-    roundcount = getrounds() # Calling getrounds and getting roundcount 
-    # Implement your function here 
+    roundCount = getrounds() # Calling getrounds and getting roundcount 
+    game = [[0] * roundCount for _ in range(len(players))] # Initialize the game score board
+    return [game, players, roundCount]
 
 # 1 Marks 
 def asktoroll(player): 
@@ -57,7 +84,8 @@ def asktoroll(player):
     :param string:player (player input is string called player name)
     :return int:score (Returns score from roll dice)
     """
-    # Implement your function here 
+    input(f"{player}! Hit enter once you are ready to roll your dices!")
+    return rolldice() 
 
 # 2 Marks 
 def findwinner(game, players):
@@ -68,7 +96,10 @@ def findwinner(game, players):
     :param list:players (Players list)
     :return string:winner (Winning players name as string)
     """ 
-    # Implement your function here 
+    totals = [sum(scores) for scores in game]
+    max_score = max(totals)
+    winners = [players[i] for i, score in enumerate(totals) if score == max_score]
+    return ', '.join(winners) 
 
 # 5 Marks 
 def rungame():
@@ -80,13 +111,25 @@ def rungame():
     When the game finish it prompts for continuation and if chose to continue run the game again otherwise terminate.
     """
 
-    # The next 5 lines are to get you started 
-    # Implement the rest of the code 
-    gameset = setgame() # Calling the setgame to get game info 
-    game = gameset[0] # Getting game list 
-    players = gameset[1] # Getting playerlist 
-    roundcount = gameset[2] # Getting roundcount 
-    printgame(game, players, 0, roundcount) # Calling printgame to print the first score card. 
+    while True:
+        gameset = setgame() # Calling the setgame to get game info 
+        game = gameset[0] # Getting game list 
+        players = gameset[1] # Getting playerlist 
+        roundcount = gameset[2] # Getting roundcount 
+        printgame(game, players, 0, roundcount) # Calling printgame to print the first score card. 
+
+        for round_num in range(roundcount):
+            for i, player in enumerate(players):
+                score = asktoroll(player)
+                game[i][round_num] = score
+            printgame(game, players, round_num + 1, roundcount)
+
+        winner = findwinner(game, players)
+        print(f"Congratulation {winner}! You are our WINNER!")
+        
+        play_again = input("Would you like to play another game?\n[1] Yes\n[2] No\nYour choice: ")
+        if play_again != '1':
+            break
 
 # 5 Marks
 def printgame(game, players, roundnum, roundcount): 
@@ -104,6 +147,7 @@ def printgame(game, players, roundnum, roundcount):
     The Stars and the Round title (End of Round) are calculated and aligned as number of rounds changes. 
     This function does not return anything
     """
+
 
 def game():
     """

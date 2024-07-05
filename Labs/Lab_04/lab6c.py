@@ -11,7 +11,6 @@ def search(keyword, fileName):
         f = open(fileName, 'r')  #Create a file object
         content = f.readlines()  #Load file content
         f.close()                #Close file object
-        found = False
         for lineNumber, line in enumerate(content, start=1): #Searching for keyword
             if keyword in line:                     #Keyword found
                 print(f"{lineNumber}: {line.strip()}")

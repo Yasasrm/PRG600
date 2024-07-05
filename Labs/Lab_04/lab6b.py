@@ -9,6 +9,7 @@ import sys
 def reverseFilePrinter(fileName):
     f = open(fileName, 'r')  #Create a file object
     content = f.readlines()  #Load file content
+    f.close()                #Close file object
     content.reverse()        #Reverse file content
     for line in content:     #Print content
         print(line.strip())

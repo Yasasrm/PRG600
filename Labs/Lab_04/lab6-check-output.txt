@@ -1,13 +1,14 @@
 INFO:root:check-lab6.py 28a91ca5840d32645504b88395ff4a54
 INFO:root:logging test
-INFO:root:Test Run: 2024-07-04 23:41:10.212810
+INFO:root:Test Run: 2024-07-05 00:06:42.027730
 INFO:root:lab6a.py: test successful.
-INFO:root:lab6a.py 62a7bf5c13f8dcbd97f7e9eb80a00b0c
+INFO:root:lab6a.py 824cc6177b063eca722f78863a0645a4
 INFO:root:done.
 INFO:root:lab6b.py: test successful.
-INFO:root:lab6b.py 2419ec84594e17d0e87f2721a50d49f0
+INFO:root:lab6b.py b6eca8e76c8e21b69a1c385d80de6f62
 INFO:root:done.
-WARNING:root:lab6c.py: Failures encountered.
+INFO:root:lab6c.py: test successful.
+INFO:root:lab6c.py 704d85adfd5ebb4b1bb64a339c040b33
 INFO:root:done.
 WARNING:root:lab6d.py: Failures encountered.
 INFO:root:done.

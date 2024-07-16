@@ -7,10 +7,11 @@ Description: Lab 5 Question 2 (lab7b.py).
 meal_plan = {'breakfast': 'oatmeal', 'lunch': 'sandwiches', 'dinner': 'broccoli'}
 
 def print_meal_plan(mealPlan):
-    print("MENU FOR TODAY\n==============")
-    print(mealPlan['breakfast'])
-    print(mealPlan['lunch'])
-    print(mealPlan['dinner'])
+    print(f"{'MENU FOR TODAY': ^50}")
+    print(f"{'='*50: ^50}")
+    print(f"{'Breakfast' : <25}{mealPlan['breakfast'] : >25}")
+    print(f"{'Lunch' : <25}{mealPlan['lunch'] : >25}")
+    print(f"{'Dinner' : <25}{mealPlan['dinner'] : >25}")
 
 if __name__ == "__main__":
     print_meal_plan(meal_plan)

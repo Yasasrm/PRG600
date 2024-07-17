@@ -1,7 +1,7 @@
 ''' 
 Name: Yasas Maddumage. 
 Student ID: 170308233. 
-Description: Lab 5 Question 4 (lab7d.py).  
+Description: Lab 5 Question 5 (challenge7.py).  
 ''' 
 
 import csv
@@ -40,9 +40,24 @@ def editCsv(list_of_dicts):
             row['Country'] = 'CA'
     return list_of_dicts   
 
+def printTable(list_of_dicts):
+    keys = list_of_dicts[0].keys()
+    headers = ""
+    for key in keys:
+        headers += f"|{key: ^25}"
+    print(headers+"|")
+    print('-' * len(headers))
+
+    for row in list_of_dicts:
+        rowValue = ""
+        for key in keys:
+            rowValue += f"|{row[key]: ^25}"
+        print(rowValue+"|")
+
 if __name__ == "__main__":
     inputFile = 'sample.csv'
     outputFile = 'sample2.csv'
     data = readCsv(inputFile)
     updatedData = editCsv(data)
     writeCsv(outputFile, updatedData)
+    printTable(updatedData)

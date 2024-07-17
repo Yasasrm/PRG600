@@ -1,6 +1,6 @@
 INFO:root:check-lab7.py 7dd52ec7a5645c44808cd8ff059ef866
 INFO:root:logging test
-INFO:root:Test Run: 2024-07-16 11:45:02.660201
+INFO:root:Test Run: 2024-07-16 22:16:27.268078
 INFO:root:lab7a.py: test successful.
 INFO:root:lab7a.py e6cd95f8991b072b462c4d8ecc534a09
 INFO:root:done.
@@ -10,7 +10,9 @@ INFO:root:done.
 INFO:root:lab7c.py: test successful.
 INFO:root:lab7c.py 0bce2f03d90dda942710e2393617bdb7
 INFO:root:done.
-WARNING:root:lab7d.py: Failures encountered.
+INFO:root:lab7d.py: test successful.
+INFO:root:lab7d.py 09d1c58d930cdac67015be46fa511178
 INFO:root:done.
-WARNING:root:challenge7.py: Failures encountered.
+INFO:root:challenge7.py: test successful.
+INFO:root:challenge7.py 7c94c2e8bbbcbc483d3c5c9496a37f97
 INFO:root:done.

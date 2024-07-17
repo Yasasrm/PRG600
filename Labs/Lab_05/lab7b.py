@@ -4,8 +4,10 @@ Student ID: 170308233.
 Description: Lab 5 Question 2 (lab7b.py).  
 ''' 
 
+#Meal plan details
 meal_plan = {'breakfast': 'oatmeal', 'lunch': 'sandwiches', 'dinner': 'broccoli'}
 
+#Print meal plan using f string
 def print_meal_plan(mealPlan):
     print(f"{'MENU FOR TODAY': ^50}")
     print(f"{'='*50: ^50}")

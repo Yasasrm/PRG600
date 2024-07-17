@@ -6,7 +6,7 @@ Description: Lab 5 Question 5 (challenge7.py).
 
 import csv
 
-def readCsv(filename):
+def readCsv(filename):  #CSV file reader
     list_of_dicts = []
     with open(filename, 'r') as f:
         reader = csv.DictReader(f)
@@ -14,7 +14,7 @@ def readCsv(filename):
             list_of_dicts.append(row)
     return list_of_dicts
 
-def writeCsv(filename, list_of_dicts):
+def writeCsv(filename, list_of_dicts):  #Csv File writer
     with open(filename, 'w', newline='') as f:
         fieldnames = list_of_dicts[0].keys()
         writer = csv.DictWriter(f, fieldnames=fieldnames)
@@ -22,7 +22,7 @@ def writeCsv(filename, list_of_dicts):
         for row in list_of_dicts:
             writer.writerow(row)
 
-def editCsv(list_of_dicts):
+def editCsv(list_of_dicts):  #Change the data in csv file
     for row in list_of_dicts:
         if row.get('First Name') == 'Christopher':
             row['First Name'] = 'Chris'
@@ -40,13 +40,13 @@ def editCsv(list_of_dicts):
             row['Country'] = 'CA'
     return list_of_dicts   
 
-def printTable(list_of_dicts):
+def printTable(list_of_dicts): #Print changed data to a table
     keys = list_of_dicts[0].keys()
     headers = ""
     for key in keys:
         headers += f"|{key: ^25}"
     print(headers+"|")
-    print('-' * len(headers))
+    print('-' * (len(headers)+1))
 
     for row in list_of_dicts:
         rowValue = ""
@@ -54,7 +54,7 @@ def printTable(list_of_dicts):
             rowValue += f"|{row[key]: ^25}"
         print(rowValue+"|")
 
-if __name__ == "__main__":
+if __name__ == "__main__":  #entry point
     inputFile = 'sample.csv'
     outputFile = 'sample2.csv'
     data = readCsv(inputFile)

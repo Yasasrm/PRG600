@@ -1,0 +1,16 @@
+INFO:root:check-lab8.py 2e3a62abaa0d41d3e7f27498be1297ab
+INFO:root:logging test
+INFO:root:Test Run: 2024-08-01 00:01:52.574373
+INFO:root:lab8a.py: test successful.
+INFO:root:lab8a.py 95555b42ac5f369eb85b26e8117f4481
+INFO:root:done.
+WARNING:root:lab8b.py: Failures encountered.
+INFO:root:done.
+INFO:root:lab8c.py: test successful.
+INFO:root:lab8c.py e74301cb7be3f9490c62d372b253f7f6
+INFO:root:done.
+INFO:root:lab8d.py: test successful.
+INFO:root:lab8d.py 69bedc2fd7df93838e2d5297dd4ccbc2
+INFO:root:done.
+WARNING:root:lab8e.py: Failures encountered.
+INFO:root:done.

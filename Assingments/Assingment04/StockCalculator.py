@@ -11,6 +11,7 @@ Description: Assigment 4 Store stock calculator.
 import csv
 import re
 import math
+import sys
 
 # Function to import CSV file with current stock
 def readCsv(filename):
@@ -117,8 +118,13 @@ def generateUpdatedStockReport(stock, filename):
 
 # Entry point
 if __name__ == "__main__":
-    stockFilename = 'stock.csv'
-    updatedStockFilename = 'updated_stock.csv'
+
+    if len(sys.argv) != 3:
+        print("Usage: python <fileName>.py <sourceFileAs_arg1> <destinationFileAs_arg2>")
+        sys.exit(1)
+
+    stockFilename = sys.argv[1]
+    updatedStockFilename = sys.argv[2]
 
     stock = readCsv(stockFilename)
     displayCurrentStock(stock)

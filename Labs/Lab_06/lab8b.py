@@ -18,7 +18,7 @@ def getPhoneNumbers(filename):
         sys.exit(1)
 
     # Define the regex pattern for phone numbers
-    phonePattern = r'\b\d{3}[-.]?\d{3}[-.]?\d{4}\b'
+    phonePattern = r'\d{3}-\d{3}-\d{4}'
     
     # Use findall to match all phone numbers in the content
     return re.findall(phonePattern, content)

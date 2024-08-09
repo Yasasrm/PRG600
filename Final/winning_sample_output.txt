@@ -1,0 +1,66 @@
+$ python final.py 
+Initializing a 3X3 TicTacToe
+What is the name of the player 1: A
+What is the name of the player 2: B
+|1|2|3|
+|4|5|6|
+|7|8|9|
+A Enter the number to play your symbol X (Available Numbers 1,2,3,4,5,6,7,8,9): @
+Enter available Number
+A Enter the number to play your symbol X (Available Numbers 1,2,3,4,5,6,7,8,9): D
+Enter available Number
+A Enter the number to play your symbol X (Available Numbers 1,2,3,4,5,6,7,8,9): 1
+|X|2|3|
+|4|5|6|
+|7|8|9|
+B Enter the number to play your symbol O (Available Numbers 2,3,4,5,6,7,8,9): 2
+|X|O|3|
+|4|5|6|
+|7|8|9|
+A Enter the number to play your symbol X (Available Numbers 3,4,5,6,7,8,9): 3
+|X|O|X|
+|4|5|6|
+|7|8|9|
+B Enter the number to play your symbol O (Available Numbers 4,5,6,7,8,9): 4
+|X|O|X|
+|O|5|6|
+|7|8|9|
+A Enter the number to play your symbol X (Available Numbers 5,6,7,8,9): 5
+|X|O|X|
+|O|X|6|
+|7|8|9|
+B Enter the number to play your symbol O (Available Numbers 6,7,8,9): 6
+|X|O|X|
+|O|X|O|
+|7|8|9|
+A Enter the number to play your symbol X (Available Numbers 7,8,9): 7
+Player A is the winner
+
+Initializing a 3X3 TicTacToe
+What is the name of the player 1: A
+What is the name of the player 2: B
+|1|2|3|
+|4|5|6|
+|7|8|9|
+A Enter the number to play your symbol X (Available Numbers 1,2,3,4,5,6,7,8,9): 1
+|X|2|3|
+|4|5|6|
+|7|8|9|
+B Enter the number to play your symbol O (Available Numbers 2,3,4,5,6,7,8,9): 5
+|X|2|3|
+|4|O|6|
+|7|8|9|
+A Enter the number to play your symbol X (Available Numbers 2,3,4,6,7,8,9): 2
+|X|X|3|
+|4|O|6|
+|7|8|9|
+B Enter the number to play your symbol O (Available Numbers 3,4,6,7,8,9): 3
+|X|X|O|
+|4|O|6|
+|7|8|9|
+A Enter the number to play your symbol X (Available Numbers 4,6,7,8,9): 4
+|X|X|O|
+|X|O|6|
+|7|8|9|
+B Enter the number to play your symbol O (Available Numbers 6,7,8,9): 7
+Player B is the winner
